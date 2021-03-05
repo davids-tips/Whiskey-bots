@@ -58,4 +58,4 @@ async def joke(ctx):
   jokes=['test joke']
   await ctx.send(f'Enjoy the joke {message.author.nick}\n',jokes)
 
-bot.run('ODE0ODY5MzAwMjY2Nzk1MDI4.YDkILA.R7Rq7rwd0DSS6RRo6k51Hmad6Sw')
+bot.run('ODE0ODY5MzAwMjY2Nzk1MDI4.YDkILA.T5w9czAD--OBIocVe0wGu1secMQ')

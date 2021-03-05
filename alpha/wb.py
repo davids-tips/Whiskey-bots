@@ -42,4 +42,4 @@ async def name(ctx, arg, user1: discord.Member, user2: discord.Member):
 
 
 # EXECUTES THE BOT WITH THE SPECIFIED TOKEN. TOKEN HAS BEEN REMOVED AND USED JUST AS AN EXAMPLE.
-bot.run("Nzk4MjAxODM4ODY3NTc4OTQw.X_xlZA.x7k5jxRuhXlMLo9P6ubFlR5rt6c")
+bot.run("Nzk4MzMxNjgxMDI2NDc0MDA0.X_zeUQ.b39yujyOOHi_ihwowi1u6h3SBPs")
