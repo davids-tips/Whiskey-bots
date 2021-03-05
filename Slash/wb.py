@@ -55,8 +55,7 @@ async def UwU(ctx):
     #end of attempt
 @slash.slash(name='joke', description='Get a crappy joke')
 async def joke(ctx):
-  jokes=[]
-  await ctx.send(f'Enjoy the joke {user.display_name})
-@slash.slash
-# nickname grab link https://discord.com/channels/267624335836053506/343944376055103488/817522048745472053
+  jokes=['test joke']
+  await ctx.send(f'Enjoy the joke {message.author.nick}\n',jokes)
+
 bot.run('ODE0ODY5MzAwMjY2Nzk1MDI4.YDkILA.R7Rq7rwd0DSS6RRo6k51Hmad6Sw')
