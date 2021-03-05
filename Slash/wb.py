@@ -53,9 +53,9 @@ async def UwU(ctx):
   else:
     await ctx.send("Channel is required to be nsfw to run this command. Sorry :-/")
     #end of attempt
-@slash.slash(name='joke', description='Get a crappy joke', guild_id=798726719573065749)
-async def joke(ctx):
-  jokes=['test joke']
-  await ctx.send(f'Enjoy the joke {message.author.nick}\n',jokes)
+#@slash.slash(name='joke', description='Get a crappy joke', guild_id=798726719573065749)
+#async def joke(ctx):
+#  jokes=['test joke']
+#  await ctx.send(f'Enjoy the joke {message.author.nick}\n',jokes)
 
 bot.run('ODE0ODY5MzAwMjY2Nzk1MDI4.YDkILA.T5w9czAD--OBIocVe0wGu1secMQ')
