@@ -40,6 +40,5 @@ async def name(ctx, arg, user1: discord.Member, user2: discord.Member):
     message2.append("added role:[", rolename, '] to user2')
     await ctx.send(message2)
 
-
 # EXECUTES THE BOT WITH THE SPECIFIED TOKEN. TOKEN HAS BEEN REMOVED AND USED JUST AS AN EXAMPLE.
 bot.run("Nzk4MjAxODM4ODY3NTc4OTQw.X_xlZA.x7k5jxRuhXlMLo9P6ubFlR5rt6c")
