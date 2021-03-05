@@ -53,4 +53,4 @@ async def UwU(ctx):
   else:
     await ctx.send("Channel is required to be nsfw to run this command. Sorry :-/")
     #end of attempt
-bot.run('ODE0ODY5MzAwMjY2Nzk1MDI4.YDkILA.oZiZxzZ-8UIwjoCIHCdoZAnyCCg')
+bot.run('ODE0ODY5MzAwMjY2Nzk1MDI4.YDkILA.R7Rq7rwd0DSS6RRo6k51Hmad6Sw')
