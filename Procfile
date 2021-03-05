@@ -1,3 +1,3 @@
-WhiskeyBot: python bot/main.py
-WhiskeyBotSlash: python wbots/main2.py
+WhiskeyBot: python alpha/wb.py
+WhiskeyBotSlash: python Slash/wb.py
 WhiskeyBotBeta: python beta/wb.py
