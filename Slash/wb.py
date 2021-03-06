@@ -60,9 +60,14 @@ async def UwU(ctx):
 
 @slash.slash(name='joke', description='Get a crappy joke', guild_ids=[798726719573065749])
 async def joke(ctx):
-    jokes = ['test joke', 'joke test']
+    jokes = ['I tried to grab fog but I mist',
+             'Go to measure 8\nYou know the one before 9.',
+             '*siren noise* Nepper: Oh no I knew they would find me',
+             'Lets take a look at 11-11 oh wait I said that backwards 11-11',
+             'Have you ever slid down a metal slide in shorts and burnt your butt?\n Well thats your butt after eating taco bell',
+             'Tree paper come get yourself some tree paper']
     print(f'Enjoy the joke {ctx.author.display_name}\n' + random.choice(jokes))
-    await ctx.send(f'Enjoy the joke {ctx.author.display_name}\n' + random.choice(jokes))
+    await ctx.send(f'Enjoy the joke {ctx.author.display_name}\n' +"***"+ random.choice(jokes)+"***")
 
 
 bot.run('ODE0ODY5MzAwMjY2Nzk1MDI4.YDkILA.T5w9czAD--OBIocVe0wGu1secMQ')
