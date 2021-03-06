@@ -15,7 +15,7 @@ from discord_slash import SlashCommand
 
 print('import complete. Now connecting to discord.api')
 
-bot = commands.Bot(command_prefix="$")
+bot = commands.Bot(command_prefix="=")
 ct = datetime.datetime.now()
 slash = SlashCommand(bot, sync_commands=True,
                      delete_from_unused_guilds=True)  # Declares slash commands through the client.
@@ -60,6 +60,7 @@ async def UwU(ctx):
 
 @slash.slash(name='joke', description='Get a crappy joke', guild_ids=[798726719573065749])
 async def joke(ctx):
+    await ctx.respond()
     jokes = ['I tried to grab fog but I mist',
              'Go to measure 8\nYou know the one before 9.',
              '*siren noise* Nepper: Oh no I knew they would find me',
