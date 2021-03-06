@@ -67,7 +67,9 @@ async def joke(ctx):
              'Have you ever slid down a metal slide in shorts and burnt your butt?\n Well thats your butt after eating taco bell',
              'Tree paper come get yourself some tree paper']
     print(f'Enjoy the joke {ctx.author.display_name}\n' + random.choice(jokes))
-    await ctx.send(f'Enjoy the joke {ctx.author.display_name}\n' +"***"+ random.choice(jokes)+"***")
+    await ctx.send(f'Enjoy the joke {ctx.author.display_name}\n' + "***" + random.choice(jokes) + "***")
+
+
 
 
 bot.run('ODE0ODY5MzAwMjY2Nzk1MDI4.YDkILA.T5w9czAD--OBIocVe0wGu1secMQ')
