@@ -53,7 +53,7 @@ async def UwU(ctx):
   else:
     await ctx.send("Channel is required to be nsfw to run this command. Sorry :-/")
     #end of attempt
-@slash.slash(name='joke', description='Get a crappy joke',guild_ids=guild_ids)
+@slash.slash(name='joke', description='Get a crappy joke', guild_ids=798726719573065749)
 async def joke(ctx):
   jokes=['test joke']
   print(f'Enjoy the joke {message.author.display_name}\n'+jokes)
