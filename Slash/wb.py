@@ -18,7 +18,7 @@ bot = commands.Bot(command_prefix="$")
 ct = datetime.datetime.now()
 slash = SlashCommand(bot, sync_commands=True, delete_from_unused_guilds=True) # Declares slash commands through the client.
 
-guild_id = [] # Put your server ID in this array.
+guild_ids = [798726719573065749] # Put your server ID in this array.
 
 @bot.event
 async def on_ready(autopost=True, case_insensitive=True):
@@ -53,9 +53,10 @@ async def UwU(ctx):
   else:
     await ctx.send("Channel is required to be nsfw to run this command. Sorry :-/")
     #end of attempt
-@slash.slash(name='joke', description='Get a crappy joke')
+@slash.slash(name='joke', description='Get a crappy joke',guild_ids=guild_ids)
 async def joke(ctx):
   jokes=['test joke']
-  await ctx.send(f'Enjoy the joke {message.author.nick}\n',jokes)
+  print(f'Enjoy the joke {message.author.display_name}\n'+jokes)
+  await ctx.send(f'Enjoy the joke {message.author.display_name}\n'+jokes)
 
 bot.run('ODE0ODY5MzAwMjY2Nzk1MDI4.YDkILA.T5w9czAD--OBIocVe0wGu1secMQ')
