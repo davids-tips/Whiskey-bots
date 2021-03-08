@@ -32,7 +32,7 @@ from .settings import Settings
 from .utils import maybe_add_role
 
 log = logging.getLogger(name="red.breadcogs.automod")
-
+client = discord.Client(intents=discord.Intents.all())
 
 class AutoMod(
     Cog, Settings, GroupCommands,
@@ -241,3 +241,4 @@ class AutoMod(
                         await self._take_action(rule, message, is_offensive)
                     else:
                         await self._take_action(rule, message)
+client.run('ODE4NTQxNzYyNzQ1NDY2ODkw.YEZkbA.1oW6z8PzIm5Gcmqu1tSZrMjBEV4')
