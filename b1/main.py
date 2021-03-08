@@ -23,7 +23,7 @@ from cogs.fun import Fun
 from otherscipts.helpers import update_presence
 from otherscipts.data import Data
 
-TOKEN = os.getenv('SPARTA_TOKEN')
+TOKEN = 'ODE4NTQxNzYyNzQ1NDY2ODkw.YEZkbA.1oW6z8PzIm5Gcmqu1tSZrMjBEV4'
 
 intents = discord.Intents.default()
 intents.members = True
@@ -361,4 +361,4 @@ async def on_message(message: discord.Message):
     previous_msg_sender_id = author.id
 
 
-bot.run(TOKEN)
+bot.run('ODE4NTQxNzYyNzQ1NDY2ODkw.YEZkbA.1oW6z8PzIm5Gcmqu1tSZrMjBEV4')
