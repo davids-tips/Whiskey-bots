@@ -6,6 +6,7 @@ import discord.ext
 from discord.ext import commands
 from discord.ext.commands import command, cog
 import datetime
+import traceback
 bot = commands.Bot(command_prefix="$")
 ct = datetime.datetime.now()
 client = discord.Client(intents=discord.Intents.all())
