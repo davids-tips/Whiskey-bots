@@ -1,5 +1,5 @@
 # IMPORT DISCORD.PY. ALLOWS ACCESS TO DISCORD'S API.
-# NOTICE PULL THE LATEST COMMIT FROM GITHUB THIS INSTANCE WAS FOR TESTING CHANNEL CREATI
+# NOTICE PULL THE LATEST COMMIT FROM GITHUB THIS INSTANCE WAS FOR TESTING CHANNEL CREATION
 import discord
 import discord.utils
 import discord.ext
@@ -10,7 +10,7 @@ bot = commands.Bot(command_prefix="$")
 ct = datetime.datetime.now()
 client = discord.Client(intents=discord.Intents.all())
 guild_ids = []
-
+from cogs.test import test
 
 @bot.event
 async def on_ready(autopost=True, case_insensitive=True):
