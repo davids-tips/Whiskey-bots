@@ -9,7 +9,7 @@ class Moderation(commands.Cog):
     async def foo(self, ctx):
         await ctx.send("Foo!")
         
-@bot.command(name='testing', description='test command')
+    @bot.command(name='testing', description='test command')
 async def name(ctx):
     await ctx.send('hello there')
         
