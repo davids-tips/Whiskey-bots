@@ -1,10 +1,7 @@
 # IMPORT DISCORD.PY. ALLOWS ACCESS TO DISCORD'S API.
 # NOTICE PULL THE LATEST COMMIT FROM GITHUB THIS INSTANCE WAS FOR TESTING CHANNEL CREATION
 import discord
-import discord.utils
-import discord.ext
 from discord.ext import commands
-from discord.ext.commands import command, cog
 import datetime
 import traceback
 bot = commands.Bot(command_prefix="$")
@@ -20,7 +17,7 @@ async def on_ready(autopost=True, case_insensitive=True):
         'odd string of numbers you see above\n',
         'End \n Ready for commands')
     try:
-        bot.load_extension("cogs.moderation")  # Instead of a file-like or path-like string, you put `directory.file`, without a file extension.
+        bot.load_extension("cogs.mod")  # Instead of a file-like or path-like string, you put `directory.file`, without a file extension.
     except:
         print("Failed to load moderation:")
         traceback.print_exc()
