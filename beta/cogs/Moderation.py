@@ -1,14 +1,13 @@
 import discord
-import discord.utils
-import discord.ext
 from discord.ext import commands
-from discord.ext.commands import command, cog
-import datetime
 
-bot = commands.Bot(command_prefix="$")
-
-class test(cog):
+class Moderation(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+
+    @commands.command()
+    async def foo(self, ctx):
+        await ctx.send("Foo!")
+        
 def setup(bot):
-    bot.add_cog(Help(bot))
+    bot.add_cog(Moderation(bot))
