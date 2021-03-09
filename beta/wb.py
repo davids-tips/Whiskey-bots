@@ -19,7 +19,7 @@ async def on_ready(autopost=True, case_insensitive=True):
     try:
         bot.load_extension("cogs.mod")  # Instead of a file-like or path-like string, you put `directory.file`, without a file extension.
     except:
-    print("Failed to load moderation:")
+        print("Failed to load moderation:")
     traceback.print_exc()
 
 
