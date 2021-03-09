@@ -9,7 +9,6 @@ import datetime
 import traceback
 bot = commands.Bot(command_prefix="$")
 ct = datetime.datetime.now()
-client = discord.Client(intents=discord.Intents.all())
 guild_ids = []
 
 
