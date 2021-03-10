@@ -17,7 +17,7 @@ async def on_ready(autopost=True, case_insensitive=True):
         'odd string of numbers you see above\n',
         'End \n Ready for commands')
     try:
-        bot.load_extension("mod")  # Instead of a file-like or path-like string, you put `directory.file`, without a file extension.
+        bot.load_extension("cogs.mod")  # Instead of a file-like or path-like string, you put `directory.file`, without a file extension.
     except:
         print("Failed to load moderation:")
     traceback.print_exc()
