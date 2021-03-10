@@ -1,8 +1,7 @@
  name: Build and push Docker images
   # You may pin to the exact commit or the version.
-  # uses: docker/build-push-action@9379083e426e2e84abb80c8c091f5cdeb7d3fd7a
-  uses: docker/build-push-action@v2.3.0
-  with:
+ uses: docker/build-push-action@v2.3.0
+ with:
     # Builder instance
     builder: # optional
     # Build's context is the set of files located in the specified PATH or URL
