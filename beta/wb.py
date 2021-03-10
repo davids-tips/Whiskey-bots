@@ -8,19 +8,15 @@ bot = commands.Bot(command_prefix="$")
 ct = datetime.datetime.now()
 guild_ids = []
 
-
 @bot.event
 async def on_ready(autopost=True, case_insensitive=True):
     print('Ready!')
-    print(
-        'Singular guild ids and the strung of guild ids has been printing. That is the'
-        'odd string of numbers you see above\n',
-        'End \n Ready for commands')
-    try:
-        bot.load_extension("cogs.mod")  # Instead of a file-like or path-like string, you put `directory.file`, without a file extension.
-    except:
-        print("Failed to load moderation:")
-    traceback.print_exc()
+
+try:
+    bot.load_extension("cogs.mod")  # Instead of a file-like or path-like string, you put `directory.file`, without a file extension.
+except:
+    print("Failed to load moderation:")
+traceback.print_exc()
 
 
 @bot.command(name='1o1', description='creates 1 on 1 room')

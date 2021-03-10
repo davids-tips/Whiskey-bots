@@ -4,7 +4,9 @@ bot = commands.Bot(command_prefix="$")
 class Moderation(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-
+@commands.Cog.listener()
+async def on_ready(self):
+  print('started')
     @commands.command()
     async def foo(self, ctx):
         await ctx.send("Foo!")
