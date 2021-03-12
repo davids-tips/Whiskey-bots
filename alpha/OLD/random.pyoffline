@@ -1,0 +1,58 @@
+# list of assorted variables required for ensuring that all cards get sent once until the a reset has been completed
+used1 = 'false'
+used2 = 'false'
+used3 = 'false'
+used4 = 'false'
+temcsn = 'false'
+true = '1'
+vars = ['1','2','3','4','5']
+finalvar ='blank'
+ForceStop='false'
+ifrepair = '0'
+while ForceStop=='false':
+    tempcsn = random.choice(vars)
+  # print(tempcsn) commented to test
+    if tempcsn=='<first url>':
+        if used1=='true':
+            ifrepair = '1'
+        else:
+            used1='true'
+            finalvar=tempcsn
+            print(finalvar)
+
+    elif tempcsn=='<second Url>':
+        if used2=='true':
+            ifrepair = '1'
+
+        else:
+            used2='true'
+            finalvar=tempcsn
+            print(finalvar)
+
+    elif tempcsn=='<third url>':
+        if used3=='true':
+            ifrepair = '1'
+        else:
+            used3='true'
+            finalvar=tempcsn
+            print(finalvar)
+
+    elif tempcsn=='<fourth url':
+        if used4=='true':
+            ifrepair = '1'
+        else:
+            used4='true'
+            finalvar=tempcsn
+            print(finalvar)
+    # To add more cards please add more variables for example
+    #Used2 replace the 2 with the card number
+    #then add it to the list and copy one of the elif statment codes above and replace the Used number with the card number. finally add a "and used2==true" to the code below
+
+    #checksums
+    #checks to see if all variables = true to prevent duplicate responces
+        if ForceStop =='false' and used1=='true' and used2=='true' and used3=='true' and used4=='true':
+            ForceStop = 'true'
+    continue
+
+
+
