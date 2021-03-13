@@ -41,14 +41,14 @@ async def _pick(ctx, choice1, choice2):  # Command with 1 or more args.
     await ctx.send(content=str(random.choice([choice1, choice2])))
 
 
-@slash.slash(name="IOwO", description="Get OwO'd")
+@slash.slash(name="OwO", description="Get OwO'd")
 async def OwO(ctx):
     await ctx.send("OwO Whats This?")
     if ctx.channel.is_nsfw():
         await ctx.send("*Notices Buldge*")
 
 
-@slash.slash(name="IUwU", description="Get UwU'd")
+@slash.slash(name="UwU", description="Get UwU'd")
 async def UwU(ctx):
     if ctx.channel.is_nsfw():
         await ctx.send("UwU Can i help you with your buldgy-wulgy")
@@ -71,6 +71,27 @@ async def joke(ctx):
     await ctx.send(f'Enjoy the joke {ctx.author.display_name}\n' + "***" + random.choice(jokes) + "***")
 
 
+@slash.slash(name='1o1room', description='create a 1on1 privite nsfw chatroom')
+async def name(ctx, RoleName, user1: discord.Member, user2: discord.Member, channel_name):
+    role = await ctx.guild.create_role(name=RoleName)
+    message2 = []
+    await ctx.send(RoleName)
+    print("arg= ", RoleName)
+    # role = discord.utils.get(ctx.guild.roles, name=arg)
+    await user1.add_roles(role)
+    print("added role:[", RoleName, '] to user1')
+    await user2.add_roles(role)
+    print("added role:[", RoleName, '] to user2')
+    await ctx.send('added roles successfully')
+
+    overwrites = {
+        ctx.guild.default_role: discord.PermissionOverwrite(read_messages=False),
+        ctx.guild.me: discord.PermissionOverwrite(read_messages=True),
+        role: discord.PermissionOverwrite(read_messages=True)
+    }
+    print('overwrites set sucessfully')
+    channel = await ctx.guild.create_text_channel(channel_name, overwrites=overwrites, nsfw=True, catergory='PRIVITE')
+    print('channel created sucessfully')
 
 
 bot.run('ODE0ODY5MzAwMjY2Nzk1MDI4.YDkILA.T5w9czAD--OBIocVe0wGu1secMQ')
