@@ -71,8 +71,7 @@ async def joke(ctx):
     await ctx.send(f'Enjoy the joke {ctx.author.display_name}\n' + "***" + random.choice(jokes) + "***")
 
 
-@slash.slash(name='1o1room', description='create a 1on1 privite nsfw chatroom',
-             guild_ids=[798726719573065749, 783755411152961546, 748212066359443477])
+@slash.slash(name='1o1room', description='create a 1on1 privite nsfw chatroom')
 async def name(ctx, RoleName, user1: discord.Member, user2: discord.Member, channel_name):
     role = await ctx.guild.create_role(name=RoleName)
     message2 = []
