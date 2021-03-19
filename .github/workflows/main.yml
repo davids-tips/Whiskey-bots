@@ -1,4 +1,4 @@
-name: Super-Linter
+name: main
 
 # Run this workflow every time a new commit pushed to your repository
 on: push
@@ -8,7 +8,7 @@ jobs:
   # when a job name is not provided
   main:
     # Name the Job
-    name: Lint code base
+    name: Docker
     # Set the type of machine to run on
     runs-on: self-hosted
 
