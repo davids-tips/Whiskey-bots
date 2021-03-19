@@ -1,25 +1,35 @@
-name: Super-Linter
-
-# Run this workflow every time a new commit pushed to your repository
-on: push
-
-jobs:
-  # Set the job key. The key is displayed as the job name
-  # when a job name is not provided
-  super-lint:
-    # Name the Job
-    name: Lint code base
-    # Set the type of machine to run on
-    runs-on: self-hosted
-
-    steps:
-      # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Runs the Super-Linter action
-      - name: Run Super-Linter
-        uses: github/super-linter@v3
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+- name: Docker action with gcr authentication helper
+  # You may pin to the exact commit or the version.
+  # uses: aweris/gcr-docker-action@9b60a6dcb7a9aeed862f20ffaad830c31c850c9d
+  uses: aweris/gcr-docker-action@v1
+  with:
+    # commands to run( build-push | build | push ).
+    cmd: # optional, default is build-push
+    # Server address of Docker registry. If not set then will default to Docker Hub
+    registry: # optional, default is eu.gcr.io
+    # Docker repository to tag the image with
+    repository: 
+    # Comma-delimited list of tags. These will be added to the registry/repository to form the image's tags
+    tags: # optional
+    # Automatically tags the built image with the git reference as per the readme
+    tag_with_ref: # optional, default is true
+    # Automatically tags the built image with the git short SHA as per the readme
+    tag_with_sha: # optional, default is true
+    # Path to run docker build from
+    path: # optional, default is .
+    # Name of the Dockerfile (Default is 'path/Dockerfile')
+    dockerfile: # optional
+    # Sets the target stage to build
+    target: # optional
+    # Always attempt to pull a newer version of the image
+    always_pull: # optional, default is true
+    # Comma-delimited list of build-time variables
+    build_args: # optional
+    # Comma-delimited list of images to consider as cache sources
+    cache_froms: # optional
+    # Comma-delimited list of labels to add to the built image
+    labels: # optional
+    # Adds labels with git repository information to the built image
+    add_git_labels: # optional, default is true
+    # Whether to push the image
+    push: # optional, default is true
