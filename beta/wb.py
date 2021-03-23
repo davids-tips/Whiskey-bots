@@ -28,6 +28,11 @@ async def on_ready(autopost=True, case_insensitive=True):
 #    await ctx.message.delete()
 #    await ctx.send('test message')
 # end
+@bot.command(name='boop', description='boop someone', alias=['boops', 'Boop', 'Boops'])
+async def boop(ctx):
+    print('sucess')
+
+
 @bot.command(name='1o1', description='creates 1 on 1 room')
 @commands.has_permissions(manage_roles=True)
 async def name(ctx, arg, user1: discord.Member, user2: discord.Member, channel_name):
