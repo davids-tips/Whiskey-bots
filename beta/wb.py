@@ -28,21 +28,14 @@ async def on_ready(autopost=True, case_insensitive=True):
 #    await ctx.message.delete()
 #    await ctx.send('test message')
 # end
-@bot.command(name='boop', description='boop someone', alias=['boops', 'Boop', 'Boops'])
-async def boop(ctx, user: discord.Member):
-    print('debug')
-    await ctx.send(f'*{ctx.author.name} boops {user.display_name} on the nose*')
-@boop.error
-async def boop_error(ctx, error):
-    if isinstance(error, commands.MissingRequiredArgument):
+# Import Cogs
+from cogs.social import *
+THEME_COLOR = discord.Colour.blue()
 
-        await ctx.send('There is a missing Argument in the above command call. EX: \n ```$boop {mentionuserhere}```', delete_after=10)
-        await ctx.send('`Note these messages will self-destruct in about 10 seconds`', delete_after=10)
-       # the 'delete_after=#' is used to clean up the server from error messages after the set amont of time
-        print('There is a missing Argument in the above command call. EX: \n $boop {mentionuserhere}')
-    if isinstance(error, commands.BadArgument):
-        await ctx.send('I could not find that member...', delete_after=5)
-        print('I could not find that member...')
+# Add Cogs
+bot.add_cog(social(bot, THEME_COLOR))
+
+
 
 @bot.command(name='1o1', description='creates 1 on 1 room')
 @commands.has_permissions(manage_roles=True)
