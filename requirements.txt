@@ -6,3 +6,4 @@ discord.py
 webhooks
 discord-pretty-help
 discord-py-slash-command
+aiohttp~=3.7.4

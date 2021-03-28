@@ -1,4 +1,18 @@
-@bot.command(name='boop', description='boop someone', alias=['boops', 'Boop', 'Boops'])
+import discord
+from discord.ext import commands
+import datetime
+from cogs.social import *
+bot = commands.Bot(command_prefix="$")
+ct = datetime.datetime.now()
+guild_ids = []
+print('importing?')
+
+
+
+
+
+
+@bot.command(name='boop', description='boop someone', aliases=['boops', 'Boop', 'Boops'])
 async def boop(ctx, user: discord.Member):
     print('debug')
     await ctx.send(f'*{ctx.author.name} boops {user.display_name} on the nose*')

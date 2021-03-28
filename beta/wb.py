@@ -3,7 +3,7 @@
 import discord
 from discord.ext import commands
 import datetime
-
+from cogs.social import *
 bot = commands.Bot(command_prefix="$")
 ct = datetime.datetime.now()
 guild_ids = []
@@ -28,35 +28,17 @@ async def on_ready(autopost=True, case_insensitive=True):
 #    await ctx.message.delete()
 #    await ctx.send('test message')
 # end
-# Import Cogs
-from cogs.social import *
-THEME_COLOR = discord.Colour.blue()
 
-# Add Cogs
-bot.add_cog(social(bot, THEME_COLOR))
+class MyCog(commands.Cog):  # All cogs must inherit from commands.Cog
+    """A simple, basic cog."""
 
+    def __init__(self, bot: commands.Bot):
+        self.bot = bot
 
+bot.load_extension("social")  # <--- This single line of code to be precise
+def setup(bot: commands.Bot):
+    bot.add_cog(social(bot))
 
-@bot.command(name='1o1', description='creates 1 on 1 room')
-@commands.has_permissions(manage_roles=True)
-async def name(ctx, arg, user1: discord.Member, user2: discord.Member, channel_name):
-    role = await ctx.guild.create_role(name=arg)
-    message2 = []
-    await ctx.send(arg)
-    print("arg= ", arg)
-   # role = discord.utils.get(ctx.guild.roles, name=arg)
-    await user1.add_roles(role)
-    print("added role:[", arg, '] to user1')
-    await user2.add_roles(role)
-    print("added role:[", arg, '] to user2')
-    await ctx.send('added roles sucessfully')
-
-    overwrites = {
-        ctx.guild.default_role: discord.PermissionOverwrite(read_messages=False),
-        ctx.guild.me: discord.PermissionOverwrite(read_messages=True),
-        role: discord.PermissionOverwrite(read_messages=True)
-    }
-    channel = await ctx.guild.create_text_channel(channel_name, overwrites=overwrites, nsfw=True, catergory='PRIVITE')
 
 # EXECUTES THE BOT WITH THE SPECIFIED TOKEN. TOKEN HAS BEEN REMOVED AND USED JUST AS AN EXAMPLE.
 #avoid scrolling down to prevent token leak
