@@ -19,7 +19,7 @@ handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(me
 logger.addHandler(handler)
 # end of logging
 print('logging setup complete')
-Token = ('Nzk4MzMxNjgxMDI2NDc0MDA0.X_zeUQ.b39yujyOOHi_ihwowi1u6h3SBPs')
+Token = ('N')
 
 # creating python file to the cards against furries script
 

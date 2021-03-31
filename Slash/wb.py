@@ -94,4 +94,4 @@ async def name(ctx, RoleName, user1: discord.Member, user2: discord.Member, chan
     print('channel created sucessfully')
 
 
-bot.run('ODE0ODY5MzAwMjY2Nzk1MDI4.YDkILA.T5w9czAD--OBIocVe0wGu1secMQ')
+bot.run('')

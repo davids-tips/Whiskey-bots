@@ -66,4 +66,4 @@ async def name(ctx, arg, user1: discord.Member, user2: discord.Member, channel_n
 
 
 
-bot.run("Nzk4MjAxODM4ODY3NTc4OTQw.X_xlZA.7KPYmPbWKWOIpccbUY9ikaJs4B8")
+bot.run("")
