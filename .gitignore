@@ -1,0 +1,4 @@
+*.env
+*.yml
+test.py
+.gitsecret/keys/random_seed

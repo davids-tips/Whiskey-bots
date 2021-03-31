@@ -31,7 +31,6 @@ async def on_ready(autopost=True, case_insensitive=True):
 # Import Cogs
 from cogs.social import *
 THEME_COLOR = discord.Colour.blue()
-
 # Add Cogs
 bot.add_cog(social(bot, THEME_COLOR))
 
