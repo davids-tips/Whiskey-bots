@@ -1,2 +1,5 @@
 # Whiskey-bots
-# This Repository should be _PRIVITE_ if not please contact me at dpowell6grade@gmail.com
+# This Repository should be _public_.
+
+- Permission to make repo public was given by _Whiskey Dev_.
+- [x] :thumbsup:
