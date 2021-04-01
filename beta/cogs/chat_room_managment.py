@@ -11,7 +11,6 @@ class chat_room_managment(commands.Cog):
 
     @commands.command(name='1o1', description='creates 1 on 1 room')
     @commands.has_permissions(manage_roles=True)
-    @commands.command(description="creates 1 on 1 room")
     async def name(ctx, arg, user1: discord.Member, user2: discord.Member, channel_name):
         role = await ctx.guild.create_role(name=arg)
         message2 = []
