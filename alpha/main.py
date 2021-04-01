@@ -8,7 +8,10 @@ import email.message
 # from replit import db
 import logging
 import datetime
+import os
+from dotenv import load_dotenv
 
+load_dotenv()  # take environment variables from .env.
 print('import complete!')
 print('setting up logging')
 # logging for errors and other items
@@ -19,7 +22,6 @@ handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(me
 logger.addHandler(handler)
 # end of logging
 print('logging setup complete')
-Token = ('N')
 
 # creating python file to the cards against furries script
 
@@ -99,4 +101,4 @@ async def on_message(message):
         await message.channel.send('***Good Evening, Master!***')
 
 
-client.run(Token)
+client.run(os.getenv('wbalpha'))

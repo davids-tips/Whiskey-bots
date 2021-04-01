@@ -2,6 +2,3 @@
 *.yml
 test.py
 .gitsecret/keys/random_seed
-tokens/wbA/token.env
-tokens/wbB/token.env
-tokens/wbSlsh/token.env

@@ -3,6 +3,10 @@
 import discord
 from discord.ext import commands
 import datetime
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # take environment variables from .env.
 
 bot = commands.Bot(command_prefix="$")
 ct = datetime.datetime.now()
@@ -66,4 +70,4 @@ async def name(ctx, arg, user1: discord.Member, user2: discord.Member, channel_n
 
 
 
-bot.run("")
+bot.run(os.getenv('wbbeta'))

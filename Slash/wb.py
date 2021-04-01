@@ -3,8 +3,11 @@ import discord.utils
 import discord.ext
 from discord.ext import commands
 import datetime
-import os
 import random
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # take environment variables from .env.
 # print('import complete!')
 # print('now reinstalling discord slash commands. This is REQUIRED due to how repl.it handles this instalation.')
 # stream = os.popen('pip install -U discord-py-slash-command')
@@ -94,4 +97,4 @@ async def name(ctx, RoleName, user1: discord.Member, user2: discord.Member, chan
     print('channel created sucessfully')
 
 
-bot.run('')
+bot.run(os.getenv('wbSlash'))
