@@ -2,3 +2,7 @@
 *.yml
 test.py
 .gitsecret/keys/random_seed
+beta/cogs/__pycache__
+alpha/cogs/__pycache__
+Slash/cogs/__pycache__
+beta/cogs/__pycache__/social.cpython-37.pyc
