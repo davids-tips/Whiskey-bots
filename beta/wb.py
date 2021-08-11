@@ -5,6 +5,13 @@ from discord.ext import commands
 import datetime
 import os
 from dotenv import load_dotenv
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+cred = credentials.Certificate("beta/cogs/whiskeybotdatabase-firebase-adminsdk-g9ckh-c52eb0824a.json")
+firebase_admin.initialize_app(cred, {
+    'databaseURL': 'https://whiskeybotdatabase-default-rtdb.firebaseio.com'
+})
 
 load_dotenv()  # take environment variables from .env.
 
@@ -35,9 +42,11 @@ async def on_ready(autopost=True, case_insensitive=True):
 # Import Cogs
 
 # Add Cogs
+
 bot.load_extension('cogs.social')
 bot.load_extension('cogs.chat_room_managment')
-
+bot.load_extension('cogs.socialv2')
+bot.load_extension('cogs.database')
 
 
 
