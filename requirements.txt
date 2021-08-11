@@ -6,3 +6,6 @@ discord.py
 webhooks
 discord-pretty-help
 discord-py-slash-command
+python-dotenv~=0.17.0
+aiohttp~=3.7.3
+firebase_admin
